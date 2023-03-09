@@ -121,7 +121,6 @@ nav > .logo {
 	width: 70%;
 	display: flex;
 	flex-direction: column;
-
 }
 .slideshow-container > .slideshow {
 	width: 700px;
@@ -375,55 +374,3 @@ footer > p {
 	padding-bottom: 20px;
 }
 
-@media (max-width: 576px) {
-	html {
-		font-size: 80%;
-		width: 100%;
-	}
-	nav {
-		display: flex;
-	  flex-direction: column;
-	  width: 100%;
-	}
-	nav >.menu {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	
-	}
-	.hero {
-		text-align: center;
-	}
-	.container {
-		flex-direction: column;
-		align-items: center;
-		width: 100%;
-		padding: 0;
-		padding-bottom: 25px;
-		font-size: 80%;
-	}
-	.contact-card {
-		width: 100%;
-
-	}
-	.contact {
-		width: 60%;
-	}
-	.container-package {
-		flex-direction: column;
-		align-items: center;
-	
-	}
-	.slideshow > img {
-		width: 100%;
-		height: auto;
-		padding: 0;
-	}
-	.our-package-title {
-		width: 100%;
-	}
-	.form-control {
-		width: 100%;
-	}
-}
