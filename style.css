@@ -51,6 +51,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/*DESKTOP*/
 /*navbar menu*/
 nav {
 	display: flex;
@@ -374,3 +375,59 @@ footer > p {
 	padding-bottom: 20px;
 }
 
+/*MOBILE*/
+@media (max-width: 576px) {
+	html {
+		font-size: 80%;
+		width: 100%;
+	}
+	nav {
+		display: flex;
+	  flex-direction: column;
+	  width: 100%;
+	}
+	nav >.menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	
+	}
+	.hero {
+		text-align: center;
+	}
+	.container {
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		padding: 0;
+		padding-bottom: 25px;
+	}
+	.contact-card {
+		width: 100%;
+	}
+	.container > .contact {
+		width: 75%;
+	}
+	.container-package {
+		flex-direction: column;
+		align-items: center;
+	}
+	.container-package > .packages {
+		width: 100%;
+	}
+	.slideshow > img {
+		width: 50%;
+		height: auto;
+		padding: 0;
+	}
+	.our-package-title {
+		width: 100%;
+	}
+	.form-control {
+		width: 100%;
+	}
+	footer > .term-of-service {
+		width: 100%;
+	}
+}
