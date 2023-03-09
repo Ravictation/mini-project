@@ -37,7 +37,18 @@
         <section class="home" id="home">
             <div class="container">
                 <div class="about">
-                    <img src="./assets/images/about.jpg" alt="">
+                    <div class="slideshow-container">
+                        <div class="slideshow">
+                            <img src="./assets/images/about.jpg" alt="">
+                        </div>
+                        <div class="slideshow">
+                            <img src="./assets/images/about2.jpg" alt="">
+                        </div>
+                        <div class="slideshow">
+                            <img src="./assets/images/about3.jpg" alt="">
+                        </div>
+                    </div>
+                   
                     <div class="about-content">
                         <div class="content-caption">
                             <p>“Booking through you was very easy and made our lives so much easier. "</p>
@@ -66,18 +77,19 @@
                             <h4>Contact Us</h4>
                             <p>Our Sales Team Will Contact You Shortly</p>
                         </div>
-                        <form action="">
+                        <form  name="message-form" onsubmit="return validateForm()" >
                             <label for="Your Name" class="form-title">Your Name</label>
-                            <input type="text" Name="name" placeholder="John" class="form-control" >
+                                <input type="text" name="full-name" placeholder="John" class="form-control" >
                             <label for="Email Address" class="form-title">Email Address</label>
-                            <input type="text" Name="name" placeholder="John@email.com" class="form-control" >
+                                <input type="text" name="email-address" placeholder="John@email.com" class="form-control" >
                             <label for="Packages" class="form-title">Packages</label>
-                            <select name="Packages Choices"   class="form-control">
-                                <option value="">A</option>
-                                <option value="">B</option>
-                                <option value="">C</option>
+                                <select name="packages-choices"   class="form-control" >
+                                <option value="0">Select Option</option>
+                                <option value="1">A</option>
+                                <option value="2">B</option>
+                                <option value="3">C</option>
                             </select>
-                            <input type="Submit" value="Send" class="contact-button">
+                            <input type="submit" value="send" class="contact-button">
                         </form>
                     </div>
                 </div>
@@ -152,5 +164,35 @@
     </div>
     <p>Copyright 2023 by Ravictation. All Rights Reserved</p>
     </footer>
+    <script>
+        //fungsi untuk slideshow
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides(){
+            let i;
+            let slides = document.getElementsByClassName("slideshow");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+
+        //fungsi untuk validateform
+        function validateForm () {
+            var name = document.forms['message-form']['full-name'].value;
+            var emailAddress = document.forms['message-form']['email-address'].value;
+            var packageChoices = document.forms['message-form']['packages-choices'].value;
+
+        if (name == "" || emailAddress == "" || packageChoices == "", "Select Option"){
+            alert('Input tidak boleh kosong!');
+            return false;
+        }
+        }
+
+    </script>
 </body>
 </html>
