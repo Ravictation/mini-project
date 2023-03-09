@@ -379,12 +379,12 @@ footer > p {
 @media (max-width: 576px) {
 	html {
 		font-size: 80%;
-		width: 100%;
+
 	}
 	nav {
 		display: flex;
-	  flex-direction: column;
-	  width: 100%;
+		flex-direction: column;
+		width: 100%;
 	}
 	nav >.menu {
 		display: flex;
@@ -395,6 +395,7 @@ footer > p {
 	}
 	.hero {
 		text-align: center;
+		width: 80%;
 	}
 	.container {
 		flex-direction: column;
@@ -416,8 +417,11 @@ footer > p {
 	.container-package > .packages {
 		width: 100%;
 	}
+	.slideshow-container > .slideshow {
+		width: 100%;
+	}
 	.slideshow > img {
-		width: 50%;
+		width: 100%;
 		height: auto;
 		padding: 0;
 	}
