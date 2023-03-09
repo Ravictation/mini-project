@@ -123,6 +123,13 @@ nav > .logo {
 	flex-direction: column;
 
 }
+.slideshow-container > .slideshow {
+	width: 700px;
+	height: 400px;
+	padding-left: 30px;
+	padding-bottom: 30px;
+}
+}
 .slideshow >img {
 	width: 700px;
 	height: 400px;
